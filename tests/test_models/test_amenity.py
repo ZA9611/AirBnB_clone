@@ -33,10 +33,17 @@ class TestAmenity_instantiation(unittest.TestCase):
         self.assertEqual(datetime, type(Amenity().updated_at))
 
     def test_name_is_public_class_attribute(self):
+<<<<<<< HEAD
         am0 = Amenity()
         self.assertEqual(str, type(Amenity.name))
         self.assertIn("name", dir(Amenity()))
         self.assertNotIn("name", am0.__dict__)
+=======
+        am = Amenity()
+        self.assertEqual(str, type(Amenity.name))
+        self.assertIn("name", dir(Amenity()))
+        self.assertNotIn("name", am.__dict__)
+>>>>>>> c59caba2d83213f35a4ad96cc4b859e5a6def310
 
     def test_two_amenities_unique_ids(self):
         am1 = Amenity()

@@ -78,12 +78,21 @@ class TestBaseModel_instantiation(unittest.TestCase):
             BaseModel(id=None, created_at=None, updated_at=None)
 
     def test_instantiation_with_args_and_kwargs(self):
+<<<<<<< HEAD
         dt1 = datetime.today()
         dt_iso = dt1.isoformat()
         bm = BaseModel("12", id="345", created_at=dt_iso, updated_at=dt_iso)
         self.assertEqual(bm.id, "345")
         self.assertEqual(bm.created_at, dt1)
         self.assertEqual(bm.updated_at, dt1)
+=======
+        dt = datetime.today()
+        dt_iso = dt.isoformat()
+        bm = BaseModel("12", id="345", created_at=dt_iso, updated_at=dt_iso)
+        self.assertEqual(bm.id, "345")
+        self.assertEqual(bm.created_at, dt)
+        self.assertEqual(bm.updated_at, dt)
+>>>>>>> c59caba2d83213f35a4ad96cc4b859e5a6def310
 
 
 class TestBaseModel_save(unittest.TestCase):
@@ -153,11 +162,19 @@ class TestBaseModel_to_dict(unittest.TestCase):
         self.assertIn("__class__", bm.to_dict())
 
     def test_to_dict_contains_added_attributes(self):
+<<<<<<< HEAD
         bm1 = BaseModel()
         bm1.name = "Holberton"
         bm1.my_number = 98
         self.assertIn("name", bm1.to_dict())
         self.assertIn("my_number", bm1.to_dict())
+=======
+        bm = BaseModel()
+        bm.name = "Holberton"
+        bm.my_number = 98
+        self.assertIn("name", bm.to_dict())
+        self.assertIn("my_number", bm.to_dict())
+>>>>>>> c59caba2d83213f35a4ad96cc4b859e5a6def310
 
     def test_to_dict_datetime_attributes_are_strs(self):
         bm = BaseModel()
