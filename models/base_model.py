@@ -35,12 +35,12 @@ class BaseModel:
         """
 
         """
-        inst_dict = self.__dict__.copy()
-        inst_dict["__class__"] = self.__class__.__name__
-        inst_dict["created_at"] = self.created_at.isoformat()
-        inst_dict["updated_at"] = self.updated_at.isoformat()
+        ist_dict = self.__dict__.copy()
+        ist_dict["__class__"] = self.__class__.__name__
+        ist_dict["created_at"] = self.created_at.isoformat()
+        ist_dict["updated_at"] = self.updated_at.isoformat()
 
-        return inst_dict
+        return ist_dict
 
     def __str__(self):
         """
