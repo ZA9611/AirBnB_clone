@@ -62,19 +62,11 @@ class TestUser_instantiation(unittest.TestCase):
         self.assertLess(us1.updated_at, us2.updated_at)
 
     def test_str_representation(self):
-<<<<<<< HEAD
-        dt1 = datetime.today()
-        dt_repr = repr(dt1)
-        us = User()
-        us.id = "123456"
-        us.created_at = us.updated_at = dt1
-=======
         dt = datetime.today()
         dt_repr = repr(dt)
         us = User()
         us.id = "123456"
         us.created_at = us.updated_at = dt
->>>>>>> c59caba2d83213f35a4ad96cc4b859e5a6def310
         usstr = us.__str__()
         self.assertIn("[User] (123456)", usstr)
         self.assertIn("'id': '123456'", usstr)
@@ -82,13 +74,8 @@ class TestUser_instantiation(unittest.TestCase):
         self.assertIn("'updated_at': " + dt_repr, usstr)
 
     def test_args_unused(self):
-<<<<<<< HEAD
-        us1 = User(None)
-        self.assertNotIn(None, us1.__dict__.values())
-=======
         us = User(None)
         self.assertNotIn(None, us.__dict__.values())
->>>>>>> c59caba2d83213f35a4ad96cc4b859e5a6def310
 
     def test_instantiation_with_kwargs(self):
         dt = datetime.today()

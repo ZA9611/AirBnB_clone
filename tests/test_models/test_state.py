@@ -33,17 +33,10 @@ class TestState_instantiation(unittest.TestCase):
         self.assertEqual(datetime, type(State().updated_at))
 
     def test_name_is_public_class_attribute(self):
-<<<<<<< HEAD
-        st0 = State()
-        self.assertEqual(str, type(State.name))
-        self.assertIn("name", dir(st0))
-        self.assertNotIn("name", st0.__dict__)
-=======
         st = State()
         self.assertEqual(str, type(State.name))
         self.assertIn("name", dir(st))
         self.assertNotIn("name", st.__dict__)
->>>>>>> c59caba2d83213f35a4ad96cc4b859e5a6def310
 
     def test_two_states_unique_ids(self):
         st1 = State()

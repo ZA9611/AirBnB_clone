@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 #!/usr/bin/python3
 """Defines unittests for models/city.py.
 
@@ -8,7 +5,6 @@ Unittest classes:
     TestCity_instantiation
     TestCity_save
     TestCity_to_dict
->>>>>>> c59caba2d83213f35a4ad96cc4b859e5a6def310
 """
 import os
 import models
@@ -37,17 +33,10 @@ class TestCity_instantiation(unittest.TestCase):
         self.assertEqual(datetime, type(City().updated_at))
 
     def test_state_id_is_public_class_attribute(self):
-<<<<<<< HEAD
-        cy1 = City()
-        self.assertEqual(str, type(City.state_id))
-        self.assertIn("state_id", dir(cy1))
-        self.assertNotIn("state_id", cy1.__dict__)
-=======
         cy = City()
         self.assertEqual(str, type(City.state_id))
         self.assertIn("state_id", dir(cy))
         self.assertNotIn("state_id", cy.__dict__)
->>>>>>> c59caba2d83213f35a4ad96cc4b859e5a6def310
 
     def test_name_is_public_class_attribute(self):
         cy = City()
@@ -122,19 +111,11 @@ class TestCity_save(unittest.TestCase):
             pass
 
     def test_one_save(self):
-<<<<<<< HEAD
-        cy0 = City()
-        sleep(0.05)
-        first_updated_at = cy0.updated_at
-        cy0.save()
-        self.assertLess(first_updated_at, cy0.updated_at)
-=======
         cy = City()
         sleep(0.05)
         first_updated_at = cy.updated_at
         cy.save()
         self.assertLess(first_updated_at, cy.updated_at)
->>>>>>> c59caba2d83213f35a4ad96cc4b859e5a6def310
 
     def test_two_saves(self):
         cy = City()

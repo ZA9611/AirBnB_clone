@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""__init__ magic method for models directory"""
+"""The __init__ special method for the directory of models."""
 from models.engine.file_storage import FileStorage
 
 
